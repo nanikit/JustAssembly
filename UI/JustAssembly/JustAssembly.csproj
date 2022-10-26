@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>JustAssembly</RootNamespace>
     <AssemblyName>JustAssembly</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <WarningLevel>4</WarningLevel>
@@ -59,6 +59,9 @@
     <Reference Include="Dragablz">
       <HintPath>..\..\Binaries\Dragablz.dll</HintPath>
     </Reference>
+    <Reference Include="ICSharpCode.AvalonEdit, Version=6.1.3.50, Culture=neutral, PublicKeyToken=9cc39be672370310, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\AvalonEdit.6.1.3.50\lib\net45\ICSharpCode.AvalonEdit.dll</HintPath>
+    </Reference>
     <Reference Include="ICSharpCode.TreeView">
       <HintPath>..\..\Binaries\ICSharpCode.TreeView.dll</HintPath>
     </Reference>
@@ -98,10 +101,6 @@
     <Compile Include="..\..\CommonAssemblyInfo.cs">
       <Link>Properties\CommonAssemblyInfo.cs</Link>
     </Compile>
-    <Compile Include="Banners\Banner.cs" />
-    <Compile Include="Banners\BannerGenerator.cs" />
-    <Compile Include="Banners\BannerImage.cs" />
-    <Compile Include="Banners\BannerService.cs" />
     <Compile Include="Dialogs\DangerousResource\AssemblyType.cs" />
     <Compile Include="Dialogs\DangerousResource\DangerousResourceDialog.cs" />
     <Compile Include="Dialogs\DangerousResource\DangerousResourceDialogResult.cs" />
@@ -242,6 +241,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -266,10 +266,6 @@
       <Project>{f7bbb403-7142-4f8d-8e65-5aba94502d3d}</Project>
       <Name>Tools.MSBuildProjectBuilder</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Tools\JustAssembly.WebServiceProxy\JustAssembly.WebServiceProxy.csproj">
-      <Project>{18241a42-adb4-459f-9000-8a7e69890cb4}</Project>
-      <Name>JustAssembly.WebServiceProxy</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\JustDecompileEngine\Cecil.Decompiler\JustDecompiler.csproj">
       <Project>{ed1be103-1699-4116-a732-616beb142eb2}</Project>
       <Name>JustDecompiler</Name>
@@ -289,10 +285,6 @@
     <ProjectReference Include="..\..\Tools\JustAssembly.API\JustAssembly.API.csproj">
       <Project>{fe0ac2d6-6a79-43a0-95d7-0522d25e8199}</Project>
       <Name>JustAssembly.API</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ICSharpCode.AvalonEdit\ICSharpCode.AvalonEdit.csproj">
-      <Project>{6c55b776-26d4-4db3-a6ab-87e783b2f3d1}</Project>
-      <Name>ICSharpCode.AvalonEdit</Name>
     </ProjectReference>
     <ProjectReference Include="..\JustAssembly.Infrastructure\JustAssembly.Infrastructure.csproj">
       <Project>{5f05c639-2a66-4411-ab69-5f7dc2c55faa}</Project>
